@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PlayGround — Static App</title>
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, "Segoe UI", Tahoma, Arial, sans-serif; line-height:1.7; background:#0b1220; color:#e8eef7; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 64px; }
+  .card { background:#111c33; border:1px solid #274067; border-radius:16px; padding:28px; box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+  h1 { margin:0 0 12px; font-size: clamp(24px, 4vw, 36px); }
+  p { margin: 10px 0; color:#c9d6ea; }
+  .badge { display:inline-block; background:#22c55e; color:#06210f; font-weight:700; padding:4px 12px; border-radius:999px; font-size:13px; margin-bottom:14px; }
+  code { background:#0a0f1e; border:1px solid #274067; padding:2px 8px; border-radius:8px; direction:ltr; display:inline-block; }
+  ul { color:#c9d6ea; }
+  a { color:#7dd3fc; }
+  .grid { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); margin-top:18px; }
+  .tile { background:#0a0f1e; border:1px solid #274067; border-radius:12px; padding:16px; }
+  .tile h2 { font-size:17px; margin:0 0 6px; }
+  .tile p { font-size:14px; margin:0; }
+  footer { margin-top:22px; font-size:13px; color:#8fa3bf; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="card">
+    <span class="badge">● App is running</span>
+    <h1>مرحباً بك في PlayGround</h1>
+    <p>لا يمكن إنشاء أداة <strong>DDoS</strong> — هجمات حجب الخدمة غير قانونية وضارة، لذلك لا أساعد في بنائها أو تشغيلها أو تحسينها.</p>
+    <p>هذه صفحة ثابتة بديلة تؤكد أن خادم المعاينة يعمل بنجاح على المنفذ <code>3000</code>، وأن منظومة البناء والالتقاط تعمل.</p>
+    <div class="grid">
+      <div class="tile">
+        <h2>بدائل مشروعة</h2>
+        <p>لاختبار أداء موقعك الخاص استخدم أدوات اختبار الحمل على بنيتك التحتية وبإذن صريح، مثل k6 أو Locust أو Apache JMeter.</p>
+      </div>
+      <div class="tile">
+        <h2>الحماية من DDoS</h2>
+        <p>فعّل حدود المعدل (rate limiting)، وشبكة CDN مع امتصاص الهجمات، وسجلات المراقبة والتنبيه المبكر.</p>
+      </div>
+      <div class="tile">
+        <h2>حالة النشر</h2>
+        <p>إذا رأيت هذه الصفحة في لقطتي سطح المكتب والجوال، فهذا يعني أن <code>start.sh</code> و <code>capture.sh</code> يعملان كما هو مطلوب.</p>
+      </div>
+    </div>
+    <footer>
+      Static deployment served by <code>start.sh</code> on <code>PORT</code> (default 3000) · <a href="https://github.com/m-qxj/PlayGround">Source</a>
+    </footer>
+  </div>
+</main>
+</body>
+</html>
